@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "credits": 100
+  },
+  {
+    "id": 2,
+    "name": "Jane Doe",
+    "credits": 150
+  },
+  {
+    "id": 3,
+    "name": "Alice Wonderland",
+    "credits": 200
+  },
+  {
+    "id": 4,
+    "name": "Bob Builder",
+    "credits": 230
+  },
+  {
+    "id": 5,
+    "name": "Charlie Chaplin",
+    "credits": 240
+  },
+  {
+    "id": 6,
+    "name": "David Copperfield",
+    "credits": 175
+  },
+  {
+    "id": 7,
+    "name": "Eve Adams",
+    "credits": 210
+  },
+  {
+    "id": 8,
+    "name": "Frank Sinatra",
+    "credits": 70
+  },
+  {
+    "id": 9,
+    "name": "George Washington",
+    "credits": 180
+  }
+]

@@ -5,9 +5,9 @@
   "main": "./dist/proxy.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./dist/App.js",
+    "start": "node ./dist/proxy.js",
     "dev": "concurrently \"nodemon\" \"browser-sync start --config bs-config.js\"",
-    "predev": "tsc -w &"
+    "predev": "tsc -w & node ./dist/backend.js &"
   },
   "repository": {
     "type": "git",
