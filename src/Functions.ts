@@ -6,7 +6,7 @@ import type { Student } from "./Interfaces";
 
 dotenv.config();
 const pathToFile: string = process.env.DATAFILEPATH || "";
-const undefinedStudent: Student = { id: -1, name: "", credits: 0 };
+export const undefinedStudent: Student = { id: -1, name: "", credits: 0 };
 
 // Whitelist of allowed origins for backend
 export const backendWhitelist: string[] = [

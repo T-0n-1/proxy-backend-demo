@@ -1,7 +1,8 @@
 import express, { Request, Response, Router } from "express";
 import dotenv from "dotenv";
 import Joi from "joi";
-import { fileOperations } from "../Functions";
+import { fileOperations, undefinedStudent } from "../Functions";
+import type { Student } from "../Interfaces";
 
 const router: Router = express.Router();
 dotenv.config();
@@ -31,10 +32,12 @@ router.get("/students/:id", (req: Request, res: Response) => {
   if (error) {
     res.status(400).json({ error: error.details[0].message });
   } else {
-    if (!students.find((fruit) => student.id === Number(value.id))) {
-      res.status(404).json({ id: -1, name: "" });
-    } else {
-      res.json(students.find((student) => fruit.id === Number(value.id)));
+    if (Array.isArray(data)) {
+      if (!data.find((c) => Number(c.id) === Number(value.id))) {
+        res.status(404).json(undefinedStudent);
+      } else {
+        res.json(data.find((student) => student.id === Number(value.id)));
+      }
     }
   }
 });
