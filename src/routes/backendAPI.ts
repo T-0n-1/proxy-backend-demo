@@ -60,12 +60,10 @@ router.get("/students/:id", (req: Request, res: Response) => {
           res.status(500).send(undefinedStudent);
           return;
         }
-        let students: Student[];
-        if (typeof data === "string") {
-          students = JSON.parse(data);
-        } else {
-          students = JSON.parse(data.toString());
-        }
+        const students: Student[] =
+          typeof data === "string"
+            ? JSON.parse(data)
+            : JSON.parse(data.toString());
         if (!students.find((student) => student.id === Number(value.id))) {
           res.status(404).json(undefinedStudent);
         } else {
