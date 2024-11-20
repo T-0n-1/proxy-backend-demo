@@ -4,4 +4,4 @@ GET {{$dotenv BACKURL}}/api/students
 
 ### Backend test - get student by ID from JSON file
 
-GET {{$dotenv BACKURL}}/api/students/1
+GET {{$dotenv BACKURL}}/api/students/5

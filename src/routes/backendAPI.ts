@@ -4,7 +4,7 @@ import Joi from "joi";
 import { undefinedStudent } from "../Functions";
 import path from "path";
 import fs, { PathOrFileDescriptor } from "fs";
-import { Student } from "../Interfaces";
+import type { Student } from "../Interfaces";
 
 const router: Router = express.Router();
 dotenv.config();
@@ -41,7 +41,7 @@ router.get("/students", (req: Request, res: Response) => {
 
 router.get("/students/:id", (req: Request, res: Response) => {
   const querySchema = Joi.object({
-    id: Joi.number().required().min(1).max(10),
+    id: Joi.number().required().min(1).max(9999),
   }).unknown(false);
   const { value, error } = querySchema.validate(req.params);
   if (error) {
