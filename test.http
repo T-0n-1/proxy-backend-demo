@@ -1,1 +1,7 @@
-### 
+### Backend test - get all students from JSON file
+
+GET {{$dotenv BACKURL}}/api/students
+
+### Backend test - get student by ID from JSON file
+
+GET {{$dotenv BACKURL}}/api/students/1
